@@ -1,0 +1,79 @@
+                              Window, Screen, and Document Objects in JavaScript
+                    
+JavaScript is an essential language for web development, enabling developers to create dynamic and interactive 
+web pages. Three fundamental objects in JavaScript—window, screen, and document—play crucial roles in how web 
+pages are accessed, displayed, and manipulated. Understanding these objects is key to mastering client-side 
+scripting.
+
+The Window Object:
+------------------
+The window object is the global object in the browser environment. It represents the browser window or frame,
+ and all global JavaScript objects, functions, and variables automatically become members of the window object. 
+ This object serves as the interface to the browser's window, allowing developers to control the browser and
+  interact with the user.
+
+Key features and methods of the window object include:
+
+Properties:
+
+window.innerHeight and window.innerWidth: 
+    These properties return the interior height and width of the window's content area, respectively.
+window.location: 
+    This property returns a Location object containing information about the current URL. 
+window.history: 
+    Provides access to the browser's session history, allowing navigation to previous or next pages.
+
+Methods:
+
+window.alert(message):      
+    Displays an alert dialog with the specified message.
+window.confirm(message):   
+     Displays a dialog with an optional message, and two buttons: OK and Cancel.
+window.open(url, target, specs):
+    Opens a new browser window or tab with the specified URL and window features.
+
+The Screen Object
+-----------------
+
+The screen object contains information about the user's screen. It provides properties that describe the
+ dimensions and other properties of the screen, which can be useful for optimizing the display of content 
+ and improving user experience.
+
+Key properties of the screen:
+
+screen.width and screen.height:
+     Return the width and height of the user's screen, respectively.
+screen.availWidth and screen.availHeight:
+     Return the available width and height of the screen, excluding system UI features like the taskbar.
+screen.colorDepth:
+     Returns the color depth of the screen, measured in bits per pixel.
+
+The Document Object
+--------------------
+
+The document object represents the web page loaded in the browser. It is part of the Document Object Model (DOM),
+ which is a programming interface for HTML and XML documents. The document object provides methods and properties for manipulating the content and structure of the web page.
+
+Key features and methods of the document object include:
+Properties:
+
+document.title:
+     Gets or sets the title of the document.
+document.body: 
+    Represents the <body> element of the document.
+document.URL:
+     Returns the full URL of the document.
+
+Methods:
+
+document.getElementById(id): Returns the element with the specified ID.
+document.querySelector(selector): Returns the first element that matches the specified CSS selector.
+document.createElement(tagName): Creates a new element with the specified tag name.
+
+Conclusion
+The window, screen, and document objects are essential components of the browser environment in JavaScript. 
+The window object serves as the global object, providing methods to control the browser window. The screen 
+object provides information about the user's screen, enabling responsive and optimized content display.
+ The document object represents the web page itself, offering methods to manipulate the DOM and create dynamic 
+ content. Mastery of these objects is fundamental for any web developer aiming to create interactive and
+  user-friendly web applications.

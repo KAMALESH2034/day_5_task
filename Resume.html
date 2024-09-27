@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume data in JSON format and run in for loop</title>
+</head>
+
+<body>
+    <script>
+        let resume = {
+            personalInfo: {
+                name: "Kamalesh J",
+                mobileNo: "9361539190",
+                emailId: "kamaleshjeeva72@gmail.com",
+                linkedin: "https://www.linkedin.com/in/kamalesh-j-41ba70206/",
+                gitHub: "https://github.com/KAMALESH2034",
+            },
+            education: {
+                degeree: "B.E,Electronics and Commnunication engineering",
+                year: "2024",
+                college: "Bannari Amman Institute",
+                grade: 8.65,
+                place: "Nagapattinam,Tamilnadu",
+            },
+            certifications: ["NPTEl Python", "Nptel IoT", "Full Stack Developer - GUVI"],
+            skills: ["Html", "css", "Javascript","ReactJS","Bootstrap","MySQL"],
+            languages: ["English", "Tamil"],
+            summary: `Hi I'm a Electronics and Communication Engineer Student. Currently pursuing Bachelors 
+            degree in Bannari Amman institute of Tech. I want to secure a challenging position in a reputable
+             organization to expand my learnings, knowledge, and skills. To attain a responsible career 
+             opportunity to fully utilize my training and skills, while making a significant contribution 
+             to the success of the company.` ,
+            experience: {
+                companyName: "TCS",
+                yearsOfExp: 0,
+                designation: "Associate Software Engineer",
+            },
+            otherInterest: ["Sketching", "Programming"],
+            declaration: `I hereby declare that all the information provided are in accordance with the truth and fact as per my knowledge and I hold the responsibility
+                         for the correctness of the above mentioned particulars`
+        }
+
+        function iterateRes(resume) {
+                for (let key in resume) 
+                {
+                    if (typeof resume[key] === 'object' && !Array.isArray(resume[key])) 
+                    {
+                        console.log(`${key}:`);
+                        iterateRes(resume[key]);
+                    } 
+                    else if (Array.isArray(resume[key])) 
+                    {
+                        console.log(`${key}:`);
+                        resume[key].forEach(item => {
+                            console.log(` - ${item}`);
+                        });
+                    } 
+                    else 
+                    {
+                        console.log(`${key}: ${resume[key]}`);
+                    }
+                }
+            }
+            iterateRes(resume);
+    </script>
+</body>
+
+</html>
